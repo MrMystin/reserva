@@ -12,3 +12,5 @@ const ReserveSchema = new Schema({
     ref: 'House'
   }
 })
+
+export default model('Reserve', ReserveSchema)

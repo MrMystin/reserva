@@ -16,7 +16,7 @@ const HouseSchema = new Schema({
     }
 });
 
-HouseSchema.virtual('thumbnail_url'.get(function() {
+HouseSchema.virtual('thumbnail_url'.get(() => {
   return `https://localhost:4000/files/${this.thumbnail}`
 }))
 
