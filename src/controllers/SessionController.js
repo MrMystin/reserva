@@ -12,7 +12,6 @@ class SessionController {
     }
     let user = await User.findOne({ email })
     if (!user) {
-      console.log('d')
       user = await User.create({ email })
     }
     return res.json(user)
