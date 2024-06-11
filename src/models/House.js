@@ -1,4 +1,4 @@
-import { Schema, model } from 'mongoose'
+import { Schema, model } from 'mongoose';
 
 const HouseSchema = new Schema({
   thumbnail: String,
@@ -16,8 +16,8 @@ const HouseSchema = new Schema({
     }
 });
 
-HouseSchema.virtual('thumbnail_url'.get(() => {
+HouseSchema.virtual('thumbnail_url').get(() => {
   return `https://localhost:4000/files/${this.thumbnail}`
-}))
+});
 
-export default model('House', HouseSchema)
+export default model('House', HouseSchema);
